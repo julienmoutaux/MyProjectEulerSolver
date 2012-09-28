@@ -11,3 +11,20 @@
 1348823153 /home/julien/Prog/CodeBlockProj/MyProjectEulerSolver/include/AbstractSolver.h
 	<iostream>
 
+1348852844 source:/home/julien/Code/MyProjectEulerSolver/src/AbstractSolver.cpp
+	"AbstractSolver.h"
+
+1348852844 /home/julien/Code/MyProjectEulerSolver/include/AbstractSolver.h
+	<iostream>
+
+1348852844 source:/home/julien/Code/MyProjectEulerSolver/src/Exercise26.cpp
+	"Exercise26.h"
+	<list>
+	<set>
+
+1348852844 /home/julien/Code/MyProjectEulerSolver/include/Exercise26.h
+	"AbstractSolver.h"
+
+1348852844 source:/home/julien/Code/MyProjectEulerSolver/src/main.cpp
+	<iostream>
+
