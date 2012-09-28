@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1348821061 source:/home/julien/Prog/CodeBlockProj/MyProjectEulerSolver/Src/main.cpp
+	<iostream>
+
+1348821415 source:/home/julien/Prog/CodeBlockProj/MyProjectEulerSolver/src/main.cpp
+	<iostream>
+
+1348823591 source:/home/julien/Prog/CodeBlockProj/MyProjectEulerSolver/src/AbstractSolver.cpp
+	"AbstractSolver.h"
+
+1348823153 /home/julien/Prog/CodeBlockProj/MyProjectEulerSolver/include/AbstractSolver.h
+	<iostream>
+
