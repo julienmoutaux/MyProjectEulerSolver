@@ -10,3 +10,7 @@
 *.lai
 *.la
 *.a
+
+# Bin and obj directories
+bin/
+obj/
