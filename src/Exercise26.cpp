@@ -4,15 +4,22 @@
 #include <set>
 
 Exercise26::Exercise26()
-    :AbstractSolver("Exercise26",true)
 {
-
 }
 
 Exercise26::~Exercise26()
 {
     //dtor
 }
+
+     string Exercise26::GetName()
+     {
+         return "Exercise 26";
+     }
+     bool Exercise26::HasParams()
+     {
+         return true;
+     }
 
 void Exercise26::AskForParams()
 {

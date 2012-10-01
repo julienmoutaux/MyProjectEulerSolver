@@ -2,13 +2,16 @@
 1348821061 source:/home/julien/Prog/CodeBlockProj/MyProjectEulerSolver/Src/main.cpp
 	<iostream>
 
-1348821415 source:/home/julien/Prog/CodeBlockProj/MyProjectEulerSolver/src/main.cpp
+1349111986 source:/home/julien/Prog/CodeBlockProj/MyProjectEulerSolver/src/main.cpp
 	<iostream>
+	<list>
+	"ExerciseDeclaration.h"
+	"ExercisesContainer.h"
 
-1348823591 source:/home/julien/Prog/CodeBlockProj/MyProjectEulerSolver/src/AbstractSolver.cpp
+1349108935 source:/home/julien/Prog/CodeBlockProj/MyProjectEulerSolver/src/AbstractSolver.cpp
 	"AbstractSolver.h"
 
-1348823153 /home/julien/Prog/CodeBlockProj/MyProjectEulerSolver/include/AbstractSolver.h
+1349112218 /home/julien/Prog/CodeBlockProj/MyProjectEulerSolver/include/AbstractSolver.h
 	<iostream>
 
 1348852844 source:/home/julien/Code/MyProjectEulerSolver/src/AbstractSolver.cpp
@@ -27,4 +30,36 @@
 
 1348852844 source:/home/julien/Code/MyProjectEulerSolver/src/main.cpp
 	<iostream>
+
+1349112126 source:/home/julien/Prog/CodeBlockProj/MyProjectEulerSolver/src/Exercise26.cpp
+	"Exercise26.h"
+	<list>
+	<set>
+
+1349112218 /home/julien/Prog/CodeBlockProj/MyProjectEulerSolver/include/Exercise26.h
+	"AbstractSolver.h"
+
+1349111459 source:/home/julien/Prog/CodeBlockProj/MyProjectEulerSolver/src/ExerciseFactory.cpp
+	"ExerciseFactory.h"
+
+1349111476 /home/julien/Prog/CodeBlockProj/MyProjectEulerSolver/include/ExerciseFactory.h
+	"AbstractSolver.h"
+	"Tools.h"
+
+1349111679 source:/home/julien/Prog/CodeBlockProj/MyProjectEulerSolver/src/ExercisesContainer.cpp
+	"ExercisesContainer.h"
+
+1349111880 /home/julien/Prog/CodeBlockProj/MyProjectEulerSolver/include/ExercisesContainer.h
+	"ExerciseFactory.h"
+	<list>
+
+1349090285 /home/julien/Prog/CodeBlockProj/MyProjectEulerSolver/include/Tools.h
+
+1349089023 source:/home/julien/Prog/CodeBlockProj/MyProjectEulerSolver/src/Tools.cpp
+	"Tools.h"
+
+1349111259 /home/julien/Prog/CodeBlockProj/MyProjectEulerSolver/include/ExerciseDeclaration.h
+	"ExercisesContainer.h"
+	"ExerciseFactory.h"
+	"Exercise26.h"
 

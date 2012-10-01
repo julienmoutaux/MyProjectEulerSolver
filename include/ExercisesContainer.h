@@ -1,14 +1,27 @@
-#ifndef EXERCICESCONTAINER_H
-#define EXERCICESCONTAINER_H
+#ifndef EXERCISESCONTAINER_H
+#define EXERCISESCONTAINER_H
 
+#include "ExerciseFactory.h"
+#include <list>
 
-class ExercicesContainer
+using namespace std;
+
+class ExercisesContainer
 {
     public:
-        ExercicesContainer();
-        virtual ~ExercicesContainer();
-    protected:
+        static ExercisesContainer * GetInstance();
+
+        void AddFactory(ExerciseFactoryBase * factory);
+        virtual ~ExercisesContainer();
+
+        list<ExerciseFactoryBase *> GetExerciseList();
     private:
+        static ExercisesContainer * _instance;
+
+        list<ExerciseFactoryBase *>  _exerciseList;
+
+        ExercisesContainer();
+
 };
 
-#endif // EXERCICESCONTAINER_H
+#endif // EXERCISESCONTAINER_H

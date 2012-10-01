@@ -8,12 +8,11 @@ using namespace std;
 class AbstractSolver
 {
 public:
-    AbstractSolver(string name);
-    AbstractSolver(string name, bool hasParams);
+    AbstractSolver();
     virtual ~AbstractSolver();
 
-    int GetIndex();
-    string Getname();
+    static string GetName(){return "";}
+    virtual bool HasParams() = 0;
 
     void ResolveProblem();
     void ResolveProblemWithDefaultValues();
@@ -22,14 +21,9 @@ protected:
 
     virtual void SetDefaultValues()=0;
     virtual void Solve() = 0;
+
 private:
-    void Init(string name, bool hasParams);
 
-    static int _cpt;
-
-    bool _hasParams;
-    int _idx;
-    string _name;
 };
 
 #endif // ABSTRACTSOLVER_H
