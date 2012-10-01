@@ -12,14 +12,14 @@ Exercise26::~Exercise26()
     //dtor
 }
 
-     string Exercise26::GetName()
-     {
-         return "Exercise 26";
-     }
-     bool Exercise26::HasParams()
-     {
-         return true;
-     }
+string Exercise26::GetName()
+{
+    return "Exercise 26";
+}
+bool Exercise26::HasParams()
+{
+    return true;
+}
 
 void Exercise26::AskForParams()
 {
@@ -38,7 +38,7 @@ void Exercise26::Solve()
     int result = 0;
     int valMax = 0;
     int resultMax = 0;
-    for(int i = _nbMin;i<=_nbMax;i++)
+    for(int i = _nbMin; i<=_nbMax; i++)
     {
         result = TryDiv(i);
         if(result > resultMax)
@@ -61,14 +61,14 @@ int Exercise26::TryDiv(int value)
     set<int> mySet;
     while(true)
     {
-       // res = remaind/value;
+        // res = remaind/value;
         remaind = remaind%value;
         if (remaind == 0)
             return remaind;
         if (!mySet.insert(remaind).second)
         {
             int size = myList.size();
-            for(list<int>::iterator iter= myList.begin();;iter++ )
+            for(list<int>::iterator iter= myList.begin();; iter++ )
                 if (*iter != remaind)
                     --size;
                 else
