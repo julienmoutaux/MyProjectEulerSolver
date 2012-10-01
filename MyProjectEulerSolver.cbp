@@ -37,10 +37,17 @@
 		<Unit filename="include/Exercise26.h">
 			<Option virtualFolder="IncludeExercises/" />
 		</Unit>
+		<Unit filename="include/ExerciseDeclaration.h" />
+		<Unit filename="include/ExerciseFactory.h" />
+		<Unit filename="include/ExercisesContainer.h" />
+		<Unit filename="include/Tools.h" />
 		<Unit filename="src/AbstractSolver.cpp" />
 		<Unit filename="src/Exercise26.cpp">
 			<Option virtualFolder="SrcExercises/" />
 		</Unit>
+		<Unit filename="src/ExerciseFactory.cpp" />
+		<Unit filename="src/ExercisesContainer.cpp" />
+		<Unit filename="src/Tools.cpp" />
 		<Unit filename="src/main.cpp" />
 		<Extensions>
 			<code_completion />
