@@ -5,21 +5,27 @@
 #include "ExercisesContainer.h"
 #include "ExerciseFactory.h"
 
+#include "Exercise1.h"
+#include "Exercise3.h"
 #include "Exercise26.h"
+#include "Exercise29.h"
 
 
 class ExerciseDeclaration
 {
-    public:
-        static ExercisesContainer * PopulateExercisesContainer()
-        {
-                ExercisesContainer * container = ExercisesContainer::GetInstance();
+public:
+    static ExercisesContainer * PopulateExercisesContainer()
+    {
+        ExercisesContainer * container = ExercisesContainer::GetInstance();
 
-                container->AddFactory(new ExerciseFactory<Exercise26>());
+        container->AddFactory(new ExerciseFactory<Exercise1>());
+        container->AddFactory(new ExerciseFactory<Exercise3>());
+        container->AddFactory(new ExerciseFactory<Exercise26>());
+        container->AddFactory(new ExerciseFactory<Exercise29>());
 
-                return container;
-        }
-    private:
+        return container;
+    }
+private:
     ExerciseDeclaration() //Can't be instancied !!!!
     {
 

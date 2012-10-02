@@ -5,29 +5,40 @@
 		<Option title="MyProjectEulerSolver" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
-		<Option virtualFolders="SrcExercises/;IncludeExercises/;" />
+		<Option virtualFolders="Sources/MathTools/;Sources/Exercises/;Headers/MathTools/;Headers/Exercises/;" />
 		<Build>
 			<Target title="Debug">
 				<Option output="bin/Debug/MyProjectEulerSolver" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
-				<Option parameters="-e Exercise26" />
 				<Compiler>
+					<Add option="-O3" />
 					<Add option="-g" />
 				</Compiler>
+				<ExtraCommands>
+					<Add before="rm -fr $(TARGET_OUTPUT_DIR)resources" />
+					<Add after="ln -s $(PROJECT_DIR)resources $(TARGET_OUTPUT_DIR)resources" />
+					<Mode after="always" />
+				</ExtraCommands>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/MyProjectEulerSolver" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
+				<Option parameters="-e Exercise26" />
 				<Compiler>
-					<Add option="-O2" />
+					<Add option="-O3" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
 				</Linker>
+				<ExtraCommands>
+					<Add before="rm -fr $(TARGET_OUTPUT_DIR)resources" />
+					<Add after="ln -s $(PROJECT_DIR)resources $(TARGET_OUTPUT_DIR)resources" />
+					<Mode after="always" />
+				</ExtraCommands>
 			</Target>
 		</Build>
 		<Compiler>
@@ -35,19 +46,43 @@
 			<Add directory="include" />
 		</Compiler>
 		<Unit filename="include/AbstractSolver.h" />
+		<Unit filename="include/Exercise1.h">
+		  <Option virtualFolder="Headers/Exercises/" />
+		</Unit>
 		<Unit filename="include/Exercise26.h">
-			<Option virtualFolder="IncludeExercises/" />
+		  <Option virtualFolder="Headers/Exercises/" />
+		</Unit>
+		<Unit filename="include/Exercise29.h" >
+		  <Option virtualFolder="Headers/Exercises/" />
+		</Unit>
+		<Unit filename="include/Exercise3.h">
+		  <Option virtualFolder="Headers/Exercises/" />
 		</Unit>
 		<Unit filename="include/ExerciseDeclaration.h" />
 		<Unit filename="include/ExerciseFactory.h" />
 		<Unit filename="include/ExercisesContainer.h" />
+		<Unit filename="include/PrimeTool.h">
+			<Option virtualFolder="Headers/MathTools/" />
+		</Unit>
 		<Unit filename="include/Tools.h" />
 		<Unit filename="src/AbstractSolver.cpp" />
-		<Unit filename="src/Exercise26.cpp">
-			<Option virtualFolder="SrcExercises/" />
+		<Unit filename="src/Exercise1.cpp">
+			<Option virtualFolder="Sources/Exercises/" />
 		</Unit>
+		<Unit filename="src/Exercise26.cpp">
+			<Option virtualFolder="Sources/Exercises/" />
+		</Unit>
+		<Unit filename="src/Exercise29.cpp" >
+	<Option virtualFolder="Sources/Exercises/" />
+	</Unit>
+		<Unit filename="src/Exercise3.cpp" >
+	<Option virtualFolder="Sources/Exercises/" />
+	</Unit>
 		<Unit filename="src/ExerciseFactory.cpp" />
 		<Unit filename="src/ExercisesContainer.cpp" />
+		<Unit filename="src/PrimeTool.cpp">
+			<Option virtualFolder="Sources/MathTools/" />
+		</Unit>
 		<Unit filename="src/Tools.cpp" />
 		<Unit filename="src/main.cpp" />
 		<Extensions>

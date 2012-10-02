@@ -2,6 +2,7 @@
 
 #include <list>
 #include <set>
+#include "Tools.h"
 
 Exercise26::Exercise26()
 :AbstractSolver(true)
@@ -15,15 +16,16 @@ Exercise26::~Exercise26()
 
 void Exercise26::AskForParams()
 {
-    _nbMax = 1000;
-    _nbMin = 2;
+    cout<<"NbMin <= d <= NbMax"<<endl;
+    _nbMin = Tools::Cin::GetValue<int>("What is the minimum value of d ?",2);
+    _nbMax = Tools::Cin::GetValue<int>("What is the maximum value of d ?",1000);
 }
 
 void Exercise26::SetDefaultValues()
 {
     _nbMax = 1000;
     _nbMin = 2;
-    cout<<"Using default values : NbMax = "<<_nbMax<<" and NbMin = "<<_nbMin<<endl;
+    cout<<"Solving with "<<_nbMax<<" <= d <= "<<_nbMin<<endl;
 }
 
 void Exercise26::Solve()

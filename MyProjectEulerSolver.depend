@@ -21,20 +21,22 @@
 1349169944 /home/julien/Code/MyProjectEulerSolver/include/AbstractSolver.h
 	<iostream>
 
-1349170064 source:/home/julien/Code/MyProjectEulerSolver/src/Exercise26.cpp
+1349182170 source:/home/julien/Code/MyProjectEulerSolver/src/Exercise26.cpp
 	"Exercise26.h"
 	<list>
 	<set>
+	"Tools.h"
 
 1349170063 /home/julien/Code/MyProjectEulerSolver/include/Exercise26.h
 	"AbstractSolver.h"
 
-1349171596 source:/home/julien/Code/MyProjectEulerSolver/src/main.cpp
+1349179311 source:/home/julien/Code/MyProjectEulerSolver/src/main.cpp
 	<iostream>
 	<list>
 	<sstream>
 	"ExerciseDeclaration.h"
 	"ExercisesContainer.h"
+	"Tools.h"
 
 1349112126 source:/home/julien/Prog/CodeBlockProj/MyProjectEulerSolver/src/Exercise26.cpp
 	"Exercise26.h"
@@ -81,16 +83,57 @@
 	<typeinfo>
 	<cxxabi.h>
 
-1349133161 /home/julien/Code/MyProjectEulerSolver/include/Tools.h
+1349182060 /home/julien/Code/MyProjectEulerSolver/include/Tools.h
+	<iostream>
+	<sstream>
+	<string>
 
-1349133161 /home/julien/Code/MyProjectEulerSolver/include/ExerciseDeclaration.h
+1349213600 /home/julien/Code/MyProjectEulerSolver/include/ExerciseDeclaration.h
 	"ExercisesContainer.h"
 	"ExerciseFactory.h"
+	"Exercise1.h"
+	"Exercise3.h"
 	"Exercise26.h"
+	"Exercise29.h"
 
 1349170320 source:/home/julien/Code/MyProjectEulerSolver/src/ExerciseFactory.cpp
 	"ExerciseFactory.h"
 
 1349133161 source:/home/julien/Code/MyProjectEulerSolver/src/Tools.cpp
+	"Tools.h"
+
+1349187369 /home/julien/Code/MyProjectEulerSolver/include/Exercise1.h
+	"AbstractSolver.h"
+
+1349183847 source:/home/julien/Code/MyProjectEulerSolver/src/Exercise1.cpp
+	"Exercise1.h"
+	"Tools.h"
+
+1349212738 source:/home/julien/Code/MyProjectEulerSolver/src/PrimeTool.cpp
+	"PrimeTool.h"
+	<fstream>
+	<sstream>
+	<math.h>
+
+1349210834 /home/julien/Code/MyProjectEulerSolver/include/PrimeTool.h
+	<iostream>
+	<list>
+
+1349209927 /home/julien/Code/MyProjectEulerSolver/include/Exercise3.h
+	"AbstractSolver.h"
+
+1349212595 source:/home/julien/Code/MyProjectEulerSolver/src/Exercise3.cpp
+	"Exercise3.h"
+	"PrimeTool.h"
+	"Tools.h"
+	<math.h>
+
+1349213600 /home/julien/Code/MyProjectEulerSolver/include/Exercise29.h
+	"AbstractSolver.h"
+
+1349215608 source:/home/julien/Code/MyProjectEulerSolver/src/Exercise29.cpp
+	"Exercise29.h"
+	<set>
+	"PrimeTool.h"
 	"Tools.h"
 

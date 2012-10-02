@@ -2,36 +2,57 @@
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
 	<File name="include/AbstractSolver.h" open="0" top="0" tabpos="1">
-		<Cursor position="252" topLine="0" />
+		<Cursor position="543" topLine="0" />
 	</File>
-	<File name="include/Exercise26.h" open="1" top="1" tabpos="3">
-		<Cursor position="379" topLine="0" />
+	<File name="include/Exercise1.h" open="0" top="0" tabpos="0">
+		<Cursor position="217" topLine="0" />
 	</File>
-	<File name="include/ExerciseDeclaration.h" open="0" top="0" tabpos="0">
-		<Cursor position="571" topLine="0" />
+	<File name="include/Exercise26.h" open="1" top="0" tabpos="10">
+		<Cursor position="113" topLine="0" />
+	</File>
+	<File name="include/ExerciseDeclaration.h" open="1" top="0" tabpos="5">
+		<Cursor position="482" topLine="0" />
 	</File>
 	<File name="include/ExerciseFactory.h" open="0" top="0" tabpos="0">
-		<Cursor position="157" topLine="0" />
+		<Cursor position="139" topLine="0" />
 	</File>
 	<File name="include/ExercisesContainer.h" open="0" top="0" tabpos="0">
-		<Cursor position="368" topLine="0" />
+		<Cursor position="442" topLine="0" />
+	</File>
+	<File name="include/PrimeTool.h" open="0" top="0" tabpos="0">
+		<Cursor position="528" topLine="0" />
 	</File>
 	<File name="include/Tools.h" open="0" top="0" tabpos="0">
-		<Cursor position="453" topLine="0" />
+		<Cursor position="462" topLine="31" />
 	</File>
-	<File name="src/AbstractSolver.cpp" open="0" top="0" tabpos="2">
-		<Cursor position="313" topLine="0" />
+	<File name="src/AbstractSolver.cpp" open="1" top="0" tabpos="9">
+		<Cursor position="691" topLine="0" />
 	</File>
-	<File name="src/Exercise26.cpp" open="1" top="0" tabpos="2">
-		<Cursor position="346" topLine="0" />
+	<File name="src/Exercise1.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="447" topLine="1" />
 	</File>
-	<File name="src/ExerciseFactory.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="383" topLine="0" />
+	<File name="src/Exercise26.cpp" open="0" top="0" tabpos="1">
+		<Cursor position="539" topLine="2" />
 	</File>
-	<File name="src/ExercisesContainer.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="519" topLine="0" />
+	<File name="src/Exercise29.cpp" open="1" top="1" tabpos="4">
+		<Cursor position="329" topLine="0" />
 	</File>
-	<File name="src/main.cpp" open="1" top="0" tabpos="1">
-		<Cursor position="557" topLine="0" />
+	<File name="src/Exercise3.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="434" topLine="0" />
+	</File>
+	<File name="src/ExerciseFactory.cpp" open="1" top="0" tabpos="7">
+		<Cursor position="188" topLine="0" />
+	</File>
+	<File name="src/ExercisesContainer.cpp" open="1" top="0" tabpos="8">
+		<Cursor position="552" topLine="0" />
+	</File>
+	<File name="src/PrimeTool.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="2278" topLine="86" />
+	</File>
+	<File name="src/Tools.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="20" topLine="0" />
+	</File>
+	<File name="src/main.cpp" open="1" top="0" tabpos="6">
+		<Cursor position="2252" topLine="23" />
 	</File>
 </CodeBlocks_layout_file>

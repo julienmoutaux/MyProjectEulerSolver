@@ -4,6 +4,7 @@
 
 #include "ExerciseDeclaration.h"
 #include "ExercisesContainer.h"
+#include "Tools.h"
 
 using namespace std;
 
@@ -64,18 +65,12 @@ int main(int argc, char * argv[])
             cout<<(*iter)->GetIdx()<<" - "<<(*iter)->GetName()<<endl;
         }
         cout<<"Q - Quit application"<<endl;
-        cout<<"What is your choice ?"<<endl;
 
-        string input;
-        getline(cin,input);
-
-        if (input == "Q")
+        if ( !Tools::Cin::GetValue<int>("What is your choice ?","Q","Q",&numb))
         {
             cout<<"Bye bye"<<endl;
             return 0;
         }
-
-        istringstream ( input ) >> numb;
 
         list<ExerciseFactoryBase *>::iterator iter = exercisesFactory.begin();
         for(; iter != exercisesFactory.end(); iter++)
