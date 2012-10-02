@@ -4,21 +4,13 @@
 #include <set>
 
 Exercise26::Exercise26()
+:AbstractSolver(true)
 {
 }
 
 Exercise26::~Exercise26()
 {
     //dtor
-}
-
-string Exercise26::GetName()
-{
-    return "Exercise 26";
-}
-bool Exercise26::HasParams()
-{
-    return true;
 }
 
 void Exercise26::AskForParams()
@@ -31,6 +23,7 @@ void Exercise26::SetDefaultValues()
 {
     _nbMax = 1000;
     _nbMin = 2;
+    cout<<"Using default values : NbMax = "<<_nbMax<<" and NbMin = "<<_nbMin<<endl;
 }
 
 void Exercise26::Solve()

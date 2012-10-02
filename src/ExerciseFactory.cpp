@@ -12,17 +12,3 @@ int ExerciseFactoryBase::GetIdx()
     return _idx;
 }
 
-//template<class T>
-/*AbstractSolver * ExerciseFactory<T>::BuildExercise()
-{
-    return new T();
-}
-*/
-
-//template<class T>
-/*string ExerciseFactory<T>::GetName()
-{
-    return T::GetName();
-}
-
-*/

@@ -10,9 +10,6 @@ public:
     Exercise26();
     virtual ~Exercise26();
 
-    static string GetName();
-     bool HasParams();
-
 protected:
     void AskForParams();
     void Solve();

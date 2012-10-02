@@ -3,6 +3,8 @@
 
 #include "AbstractSolver.h"
 #include "Tools.h"
+#include <typeinfo>
+#include <cxxabi.h>
 
 class ExerciseFactoryBase
 {
@@ -28,7 +30,11 @@ public ExerciseFactoryBase
         ExerciseFactory(){}
         virtual ~ExerciseFactory(){}
         AbstractSolver * BuildExercise(){return new T();}
-        string GetName(){return T::GetName();}
+        string GetName()
+        {
+            int status;
+            return abi::__cxa_demangle(typeid(T).name(), 0, 0, &status);
+        }
 
         //T * BuildExercise();
     protected:
