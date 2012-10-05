@@ -1,6 +1,6 @@
 #include "AbstractSolver.h"
 
-#include <sys/time.h>
+#include <time.h>
 
 AbstractSolver::AbstractSolver()
 {
@@ -41,13 +41,11 @@ void AbstractSolver::ResolveProblemWithDefaultValues()
 }
 
 void AbstractSolver::LaunchSolver()
-{
-    struct timeval start, end;
-    gettimeofday(&start, NULL);
+{  
+  
+  time_t start,end;    
+    time (&start);
     Solve();
-    gettimeofday(&end, NULL);
-
-    long seconds = end.tv_sec  - start.tv_sec;
-    long useconds = end.tv_usec  - start.tv_usec;
-    cout<<"Compute duration :"<<seconds<<","<<useconds<<" seconds"<<endl;
+    time (&end); 
+    cout<<"Compute duration :"<<difftime (end,start)<<" seconds"<<endl;
 }

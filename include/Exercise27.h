@@ -18,11 +18,7 @@ private:
     int _aMax;
     int _bMax;
     
-    long Evaluate(int n,int a,int b);
-    /*int TryDiv(int value);
-
-    int _nbMax;
-    int _nbMin;*/
+    long Evaluate(int n,int a,int b);    
 };
 
 #endif // EXERCISE27_H
