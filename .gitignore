@@ -14,3 +14,11 @@
 # Bin and obj directories
 bin/
 obj/
+build/
+
+#a valider
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+.kdev4/
