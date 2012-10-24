@@ -10,18 +10,13 @@ using namespace std;
 
 void Exercise36::Solve()
 {
-  long long value = 0;
+    long long value = 0;
     for(int i = 1; i<_max; i++)
     {
-        if (i == 585)
-            int a  = 1;
         stringstream iss;
         iss<<i;
         if (IsPalindromic(iss.str()) && IsPalindromic(ConvertValueToBinString(i)))
-	{
-            cout<<"Palindromic value : "<<i<<endl;
-	  value += i;
-	}
+            value += i;
     }
     cout<<"The sum of all palindroms below "<<_max<<" is "<<value<<endl;
 }

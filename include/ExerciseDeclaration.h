@@ -19,6 +19,9 @@
 #include "Exercise34.h"
 #include "Exercise35.h"
 #include "Exercise36.h"
+#include "Exercise37.h"
+#include "Exercise38.h"
+#include "Exercise39.h"
 
 
 class ExerciseDeclaration
@@ -40,6 +43,9 @@ public:
 	container->AddFactory(new ExerciseFactory<Exercise34>());
 	container->AddFactory(new ExerciseFactory<Exercise35>());
 	container->AddFactory(new ExerciseFactory<Exercise36>());
+	container->AddFactory(new ExerciseFactory<Exercise37>());
+	container->AddFactory(new ExerciseFactory<Exercise38>());
+	container->AddFactory(new ExerciseFactory<Exercise39>());
 	container->AddFactory(new ExerciseFactory<Exercise40>());
 	container->AddFactory(new ExerciseFactory<Exercise48>());
 
