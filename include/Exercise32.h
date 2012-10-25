@@ -14,8 +14,7 @@ protected:
 public:
     Exercise32();
     virtual ~Exercise32();
-private :
-  static bool IsPandigital(long long multiplicand,long long multiplier,long long product);
+private :  
   static bool HasChar(string str, char value);
 };
 
