@@ -34,6 +34,19 @@ bool PrimeTool::IsPrime(long long number)
     return Find(number);
 }
 
+bool PrimeTool::IsPseudoPrime(long long value, int depth)
+{
+    if (!value%2)
+        return false;
+    int length = 0;
+    for(list<long long>::iterator iter = _primes.begin(); iter !=  _primes.end(),length<depth; length++, iter++)
+    {
+        if (!value%(*iter))
+            return false;
+    }
+    return true;
+}
+
 bool PrimeTool::Find(long long value)
 {
     //TODO Si j'etais propre je ferais au moins une recherche dichotomique ...
@@ -83,14 +96,14 @@ string PrimeTool::ConvertPrimeFactorToString(list<long long> primeFactor)
     return os.str();
 }
 
- string PrimeTool::WriteToPrimeFactor(long long value)
- {
-     return ConvertPrimeFactorToString(ConvertToPrimeFactor(value));
- }
-       string PrimeTool::WriteToPrimeFactor(long long value,long long exposant)
-       {
-           return ConvertPrimeFactorToString(ConvertToPrimeFactor(value,exposant));
-       }
+string PrimeTool::WriteToPrimeFactor(long long value)
+{
+    return ConvertPrimeFactorToString(ConvertToPrimeFactor(value));
+}
+string PrimeTool::WriteToPrimeFactor(long long value,long long exposant)
+{
+    return ConvertPrimeFactorToString(ConvertToPrimeFactor(value,exposant));
+}
 
 list<long long> PrimeTool::ConvertToPrimeFactor(long long value)
 {

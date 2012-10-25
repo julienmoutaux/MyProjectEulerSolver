@@ -26,6 +26,8 @@ class PrimeTool
        string ConvertPrimeFactorToString(list<long long> primeFactor);
 
        long long GetIemeElement(long long ieme);
+       
+       bool IsPseudoPrime(long long value, int depth);
     protected:
     private:
         void LoadFromFile();

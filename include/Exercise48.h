@@ -1,7 +1,7 @@
 #ifndef EXERCISE48_H
 #define EXERCISE48_H
 
-#include <../../home/julien/Code/MyProjectEulerSolver/include/AbstractSolver.h>
+#include <AbstractSolver.h>
 
 
 class Exercise48 : public AbstractSolver
