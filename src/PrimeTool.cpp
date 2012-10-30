@@ -36,12 +36,16 @@ bool PrimeTool::IsPrime(long long number)
 
 bool PrimeTool::IsPseudoPrime(long long value, int depth)
 {
-    if (!value%2)
+  if (depth > _primes.size())
+    BuildPrimesUntilSize(depth);
+    if ((value%2) == 0)
         return false;
     int length = 0;
     for(list<long long>::iterator iter = _primes.begin(); iter !=  _primes.end(),length<depth; length++, iter++)
     {
-        if (!value%(*iter))
+      if (value == (*iter))
+	return true;
+        if ((value%(*iter)) == 0)
             return false;
     }
     return true;
@@ -122,6 +126,25 @@ list<long long> PrimeTool::GetListOfPrimesTo(long long value)
         toReturn.push_back(*iter);
     }
     return toReturn;
+}
+
+void PrimeTool::BuildPrimesUntilSize(int size)
+{
+  list<long long>::iterator iter;
+  long long start = _lastPrime+2;
+  bool found ;
+  while (_primes.size() < size)
+  {
+    start++;
+    for( iter = _primes.begin(); iter !=  _primes.end(); iter++)
+            if (!(start%(*iter)))
+            {
+                found = true;
+                break;
+            }
+        if (!found)
+            AddPrime(start);
+  }
 }
 
 void PrimeTool::BuildPrimesUntil(long long value)

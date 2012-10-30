@@ -35,6 +35,7 @@ class PrimeTool
 
         bool Find(long long value);
         void BuildPrimesUntil(long long value);
+	void BuildPrimesUntilSize(int size);
         void AddPrime(long long prime);
 
         list<long long> _primes;

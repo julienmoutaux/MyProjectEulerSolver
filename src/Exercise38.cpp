@@ -12,6 +12,8 @@ void Exercise38::Solve()
     PandigitalTool oldPandigital;
     for(int i = 1;i<99999;++i)
     {
+      if (i == 9)
+	int a = 10;
       pandigital.BeginPandigitalConstruction();
       oldPandigital.BeginPandigitalConstruction();
       if (pandigital.AddToPandigitalConstuction(i))

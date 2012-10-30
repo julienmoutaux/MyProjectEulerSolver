@@ -2,11 +2,13 @@
 
 #include <iostream>
 #include <cmath>
+#include <assert.h>
 
 using namespace std;
 
 PandigitalTool::PandigitalTool(int max,int min)
 {
+  _target = 1;  
     if (max < min)
     {
         _min = max;
@@ -27,11 +29,44 @@ PandigitalTool::PandigitalTool(int max,int min)
         if (_min !=0)
             _inf=_inf*10 + (_max-i+1);
     }
+    InitValArray();
 }
 
 void PandigitalTool::BeginPandigitalConstruction()
 {
-  InitValArray();
+  _target ++;
+}
+
+list<long long> PandigitalTool::BuildAllPandigitals()
+{
+  list<int> availableValues;
+  list<long long> allValues;
+  long long currentValue = 0;
+  for(int i = _min;i<=_max;i++)
+    availableValues.push_back(i);
+  RecursiveBuildPandigitalList(availableValues,&allValues,currentValue);
+  return allValues;
+}
+
+void PandigitalTool::RecursiveBuildPandigitalList(list<int> availableValues, list<long long> * allValues,long long currentValue)
+{   
+  long long tempValue;
+  for(list<int>::iterator iter = availableValues.begin();iter != availableValues.end();++iter)
+  {
+    int value = *iter;
+    list<int> availableValues2 ;
+    for(list<int>::iterator iter2 = availableValues.begin();iter2 != availableValues.end();++iter2)
+      if ((*iter2) != (*iter))
+	availableValues2.push_back(*iter2);    
+    tempValue = currentValue*10 + value;
+    if (tempValue != 0)
+    {
+      if( availableValues2.size() ==0)      
+	allValues->push_back(tempValue);      
+      else
+	RecursiveBuildPandigitalList(availableValues2,allValues,tempValue);    
+    }
+  }
 }
 
  bool PandigitalTool::AddToPandigitalConstuction(long long value)
@@ -42,11 +77,34 @@ void PandigitalTool::BeginPandigitalConstruction()
  bool PandigitalTool::IsPandigitalComplete()
  {
    for(int i = _min;i<=_max;++i)
-     if (!_val[i])
+     if (_val[i] != _target)
        return false;
     return true;
  }
  
+ int PandigitalTool::IsPandigitalCandidate(long long value)
+ {
+   BeginPandigitalConstruction();
+   if (!AddToPandigitalConstuction(value))
+     return -1;
+   return IsPandigitalCandidate();
+ }
+ 
+int PandigitalTool::IsPandigitalCandidate()
+{
+    int pos = -1;
+    for ( int i = _min; i<=_max; ++i )
+        if ( _val[i] != _target)
+	{
+	  if (pos == -1)
+	     pos = i-1;
+	}
+        else if ( pos >= 0 ) //Deja un trou, pas pandigital
+            return -1;
+    if ( pos == -1 )
+        return _max;
+    return pos;
+}
  bool PandigitalTool::AddToArray(long long value)
  {
    int val;
@@ -54,8 +112,9 @@ void PandigitalTool::BeginPandigitalConstruction()
     while (value !=0)
     {
         val = value % 10;
-        if ((++_val[val]) > 1)
+        if (_val[val] == _target)
             return false;
+	_val[val] = _target;
         value /= 10;
 	if (val < _min || val > _max)
 	  return false;
@@ -116,4 +175,13 @@ int PandigitalTool::getMin()
 int PandigitalTool::getMax()
 {
     return _max;
+}
+
+long long PandigitalTool::getSup()
+{
+    return _sup;
+}
+long long PandigitalTool::getInf()
+{
+    return _inf;
 }
